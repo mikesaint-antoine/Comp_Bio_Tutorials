@@ -44,8 +44,6 @@ def sim(variables, t, params):
     return([dG1dt,dG2dt,dG3dt])
 
 
-y = odeint(sim, y0, t, args=(params,))
-
 
 
 
@@ -55,9 +53,9 @@ y = odeint(sim,y0,t, args=(params,))
 
 f, (ax1, ax2, ax3) = plt.subplots(3, sharex=True, sharey=False)
 
-line1, = ax1.plot(t , G1, color="b",label="G1")
-line2, = ax2.plot(t , G2, color="r",label="G2")
-line3, = ax3.plot(t , G3, color="g",label="G3")
+line1, = ax1.plot(t , y[:,0], color="b",label="G1")
+line2, = ax2.plot(t , y[:,1], color="r",label="G2")
+line3, = ax3.plot(t , y[:,2], color="g",label="G3")
 
 ax1.set_ylabel('Number')
 ax1.set_xlabel('Time')

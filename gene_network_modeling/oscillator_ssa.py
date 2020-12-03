@@ -42,40 +42,40 @@ while t[-1] < tend:
 
 
         # G1 production event
-        if rand * rate_sum < rates[0]:
+        if rand * rate_sum <= rates[0]:
                 G1.append(G1[-1] + 1)
                 G2.append(G2[-1])
                 G3.append(G3[-1])
 
         # G1 decay event
-        elif rand * rate_sum > rates[0] and rand * rate_sum < sum(rates[:2]):
+        elif rand * rate_sum > rates[0] and rand * rate_sum <= sum(rates[:2]):
                 G1.append(G1[-1] - 1)
                 G2.append(G2[-1])
                 G3.append(G3[-1])
 
         # G2 production event
-        elif rand * rate_sum > sum(rates[:2]) and rand * rate_sum < sum(rates[:3]):
+        elif rand * rate_sum > sum(rates[:2]) and rand * rate_sum <= sum(rates[:3]):
 
                 G1.append(G1[-1])
                 G2.append(G2[-1] + 1)
                 G3.append(G3[-1])
 
         # G2 decay event
-        elif rand * rate_sum > sum(rates[:3]) and rand * rate_sum < sum(rates[:4]):
+        elif rand * rate_sum > sum(rates[:3]) and rand * rate_sum <= sum(rates[:4]):
 
                 G1.append(G1[-1])
                 G2.append(G2[-1] - 1)
                 G3.append(G3[-1])
 
         # G3 production event
-        elif rand * rate_sum > sum(rates[:4]) and rand * rate_sum < sum(rates[:5]):
+        elif rand * rate_sum > sum(rates[:4]) and rand * rate_sum <= sum(rates[:5]):
 
                 G1.append(G1[-1])
                 G2.append(G2[-1])
                 G3.append(G3[-1] + 1)
 
         # G3 decay event
-        elif rand * rate_sum > sum(rates[:5]) and rand * rate_sum < sum(rates[:6]):
+        elif rand * rate_sum > sum(rates[:5]) and rand * rate_sum <= sum(rates[:6]):
                 G1.append(G1[-1])
                 G2.append(G2[-1])
                 G3.append(G3[-1] - 1)

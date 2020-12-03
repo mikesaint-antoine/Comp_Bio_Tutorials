@@ -26,11 +26,11 @@ while t[-1] < tend:
         rand = random.uniform(0,1)
 
         # production event
-        if rand * rate_sum > 0 and rand * rate_sum < rates[0]:
+        if rand * rate_sum > 0 and rand * rate_sum <= rates[0]:
                 X.append(X[-1] + 1)
 
         # decay event
-        elif rand * rate_sum > rates[0] and rand * rate_sum < rates[0] + rates[1]:
+        elif rand * rate_sum > rates[0] and rand * rate_sum <= rates[0] + rates[1]:
                 X.append(X[-1] - 1)
 
 
