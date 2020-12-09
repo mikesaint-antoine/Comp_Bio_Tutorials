@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 
-# y0 = [10,1] # [fish, bears] units in hundreds
+y0 = [10,1] # [fish, bears] units in hundreds
 
 t = np.linspace(0,50,num=1000)
 
@@ -14,8 +14,8 @@ beta = 0.4
 delta = 0.1
 gamma = 0.4
 
-
-y0 = [gamma/delta , alpha/beta] # [fish, bears] units in hundreds
+# steady state initial conditions
+# y0 = [gamma/delta , alpha/beta] # [fish, bears] units in hundreds
 
 
 params = [alpha, beta, delta, gamma]
