@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
 
+## logistic growth simulation
+
 y0 = [1] # start with 1 cell
 
 t = np.linspace(0,500,num=1000)
