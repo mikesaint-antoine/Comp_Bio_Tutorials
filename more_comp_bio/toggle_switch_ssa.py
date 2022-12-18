@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import random
 
-## toggle switch ssa
 
 G1 = [0]
 G2 = [0]
