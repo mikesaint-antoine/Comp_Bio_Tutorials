@@ -46,11 +46,31 @@ while(t[length(t)] < tend)
   t <- append(t,next_t)
   
   
-  
-  
-  
-  
 }
+
+
+
+par(mfrow = c(2, 1))
+plot(x = t, y = X,
+     xlab = "Time",
+     ylab = "Prey"
+)
+
+plot(x = t, y = Y,
+     xlab = "Time",
+     ylab = "Predator"
+)
+
+
+
+#Phase space plot
+par(mfrow = c(1, 1))
+plot(x = X, y = Y,
+     xlab = "Prey",
+     ylab = "Predator"
+)
+
+
 
 
 
