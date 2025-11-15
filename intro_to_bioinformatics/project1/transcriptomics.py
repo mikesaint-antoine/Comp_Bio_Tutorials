@@ -106,7 +106,7 @@ log2_FCs = np.array(log2_FCs)
 p_values_bonf = p_values * len(genes)
 
 
-to_keep = (p_values_bonf <= 0.01) & (np.abs(log2_FCs) >= 2)
+to_keep = (p_values_bonf <= 0.05) & (np.abs(log2_FCs) >= 2)
 
 sig_genes = genes[to_keep]
 sig_log2_FCs = log2_FCs[to_keep]
